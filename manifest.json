@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "ReadMore",
+    "version": "1.0",
+    "description": "Shows a warning dialog when switching tabs from specified websites",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    }
+}
