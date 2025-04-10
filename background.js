@@ -3,6 +3,7 @@ const watchedDomains = [
     'medium.com',
     'jstor.org',
     'thehindu.com',
+    'wikipedia.org'
 ];
 
 let previousTabId = null;
@@ -26,7 +27,7 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
                     // Execute script in the current tab to show dialog
                     const result = await chrome.scripting.executeScript({
                         target: { tabId: activeInfo.tabId },
-                        func: () => window.confirm("If you leave now, you'll lose your focus and the mementum we've built.")
+                        func: () => window.confirm("If you leave now, you'll lose your focus and the momentum we've built.")
                     });
                     
                     if (!result[0].result) {
